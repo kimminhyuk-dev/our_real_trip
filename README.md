@@ -295,7 +295,7 @@ api.interceptors.response.use(res => res, async error => { /* refresh & retry */
 ## 🖼️ 시연
 
 TODO: 스크린샷 / 데모 영상 / 배포 링크 추가
-- 배포 URL: TODO (확인 필요 — 코드상 운영 도메인은 `https://ourrealtrip.shop`)
+- 배포 URL: TODO (운영 도메인 `https://ourrealtrip.shop` — 라이브 여부 확인 후 기재)
 - 주요 화면 캡처: 메인 / 상품 상세 / 예약·결제 / 관리자 / 실시간 알림
 
 ---
@@ -316,4 +316,4 @@ TODO: 스크린샷 / 데모 영상 / 배포 링크 추가
 
 ## 🔗 Link
 
-- GitHub: https://github.com/kimminhyuk-dev/our_real_trip *(원본 리포지토리 — 확인 필요)*
+- GitHub: https://github.com/kimminhyuk-dev/our_real_trip
