@@ -11,7 +11,7 @@ const generateUniqueUserId = () =>
   `user_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
 
 /** JWT 발급 (필요시 사용) */
-const secretKey = process.env.JWT_SECRET || 'your_secret_key';
+const secretKey = process.env.JWT_SECRET;
 const generateToken = user => {
   console.log('[Debug] generateToken 호출. user.roles:', user.roles);
   return jwt.sign({id: user._id, roles: user.roles || ['user']}, secretKey, {

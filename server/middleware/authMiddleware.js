@@ -24,9 +24,11 @@ const authMiddleware = async (req, res, next) => {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken) {
       // console.warn(' [Middleware] 리프레시 토큰도 없음 → 로그인 필요');
-      req.user = null; // 로그인하지 않은 사용자
+      // 토큰이 전혀 없으면 비로그인 사용자로 간주하고 통과시킨다.
+      // (조회용 라우트는 선택적 인증으로 동작하며, 보호가 필요한 라우트는
+      //  authorizeRoles 또는 각 컨트롤러에서 req.user 존재 여부를 검증한다.)
+      req.user = null;
       return next();
-      return res.status(401).json({message: '로그인이 필요합니다.'});
     }
 
     try {

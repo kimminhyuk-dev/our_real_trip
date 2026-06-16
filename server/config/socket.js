@@ -6,7 +6,7 @@ const initSocket = server => {
     cors: {
       origin:
         process.env.NODE_ENV === 'production'
-          ? 'https://your-deployed-site.com' // 배포 환경
+          ? 'https://ourrealtrip.shop' // 배포 환경 (app.js CORS 화이트리스트와 동일)
           : `http://localhost:${process.env.CLIENT_PORT || 3000}`, // 개발 환경
       methods: ['GET', 'POST']
     },
